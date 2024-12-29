@@ -4,6 +4,6 @@ MetaFlora Derby is a tribute to the classic Horse Race v1.0 by Thomas Schulze, w
 
 Play it in your browser at:
 
-[https://kimmknight.github.io/HorseRacer/](https://kimmknight.github.io/HorseRacer/)
+https://metaflora-sigma-derby.vercel.app/
 
 MetaFlora Derby is written in HTML/CSS/JavaScript using Vue 3 (no build tools) and Bootstrap 5.
