@@ -6,4 +6,4 @@ Play it in your browser at:
 
 [https://kimmknight.github.io/HorseRacer/](https://kimmknight.github.io/HorseRacer/)
 
-Horse Racer is written in HTML/CSS/JavaScript using Vue 3 (no build tools) and Bootstrap 5.
+MetaFlora Derby is written in HTML/CSS/JavaScript using Vue 3 (no build tools) and Bootstrap 5.
