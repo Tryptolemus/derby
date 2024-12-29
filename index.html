@@ -72,7 +72,7 @@
 
         <div
             class="container-fluid d-flex justify-content-between align-items-center border border-dark rounded py-1 my-2">
-            <span class="btn">Cash: <b>${{ cash }}</b></span>
+            <span class="btn">GALA: <b>${{ GALA }}</b></span>
             <select class="btn shadow-none" v-model="settings.raceIntervalMs">
                 <option value="20">Normal</option>
                 <option value="10">Fast</option>
@@ -164,7 +164,7 @@
                 </div>
 
                 <div>
-                    <span class="text-danger" v-if="newBet.bet > cash"> Not enough cash for bet.</span>
+                    <span class="text-danger" v-if="newBet.bet > GALA"> Not enough GALA for bet.</span>
                     <span class="text-danger" v-if="newBet.bet > calculatePayoutForBet(newBet)"> Payout less than
                         bet.</span>
                     <span class="text-danger" v-if="!areBetHorsesUnique"> Duplicate horses selected.</span>
@@ -174,7 +174,7 @@
                     <div class="d-flex align-items-center my-2">
                         <span class="me-1">$</span>
                         <input type="number" class="form-control me-2 border border-dark shadow-none" min="1"
-                            :max="cash" style="width: 6em;" v-model="newBet.bet" @change="validateNewBetAmount">
+                            :max="GALA" style="width: 6em;" v-model="newBet.bet" @change="validateNewBetAmount">
                     </div>
                     <div>
                         Payout: ${{ 
@@ -182,7 +182,7 @@
                         }}
                     </div>
                     <button type="button" class="btn btn-outline-dark shadow-none" @click="placeBet"
-                        :disabled="newBet.bet > cash || newBet.bet > calculatePayoutForBet(newBet) || !areBetHorsesUnique">Bet!</button>
+                        :disabled="newBet.bet > GALA || newBet.bet > calculatePayoutForBet(newBet) || !areBetHorsesUnique">Bet!</button>
                 </div>
             </div>
         </div>
@@ -241,7 +241,7 @@
 
             data() {
                 return {
-                    cash: 150, // cash: the amount of money the player has available to bet with
+                    GALA: 150, // GALA: the amount of money the player has available to bet with
                     raceCount: 0, // raceCount: the number of races that have been run in the game
                     horses: [{
                         "name": "Tiny tot"
@@ -537,8 +537,8 @@
 
                 // Places a new bet
                 placeBet() {
-                    // Deduct the bet amount from the player's cash
-                    this.cash -= this.newBet.bet
+                    // Deduct the bet amount from the player's GALA
+                    this.GALA -= this.newBet.bet
                     // Add the new bet to the list of bets for the current race
                     this.race.bets.push(this.deepCopy(this.newBet))
                 },
@@ -579,8 +579,8 @@
                         }
                     }
 
-                    // Add the total payout for all bets to the player's cash balance
-                    this.cash += payout
+                    // Add the total payout for all bets to the player's GALA balance
+                    this.GALA += payout
                     return payout
                 },
 
@@ -621,9 +621,9 @@
                     if (this.newBet.bet < 1) {
                         // If the betting amount entered is zero or less, change it back to 1.
                         this.newBet.bet = 1
-                    } else if (this.newBet.bet > this.cash) {
-                        // f the betting amount entered is greater than available cash, change it back to the amount of available cash
-                        this.newBet.bet = this.cash
+                    } else if (this.newBet.bet > this.GALA) {
+                        // f the betting amount entered is greater than available GALA, change it back to the amount of available GALA
+                        this.newBet.bet = this.GALA
                     }
                 },
 
