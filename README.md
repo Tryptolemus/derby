@@ -1,6 +1,6 @@
-# Horse Racer ![](horse.png)
+# MetaFlora Derby ![](horse.png)
 
-Horse Racer is a tribute to the classic Horse Race v1.0 by Thomas Schulze, written for Mac in July 1986.
+MetaFlora Derby is a tribute to the classic Horse Race v1.0 by Thomas Schulze, written for Mac in July 1986 and the notorious Sigma Derby of Lake Tahoe Casinos.
 
 Play it in your browser at:
 
