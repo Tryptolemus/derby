@@ -87,7 +87,7 @@
                 const amountToBurn = 1; // Adjust this to the required GALA amount
                 await wallet.burn('GALA', amountToBurn);
                 alert(`Burned ${amountToBurn} GALA! Redirecting to game...`);
-                window.location.href = 'index.html'; // Redirect to the game screen
+                window.location.href = 'game.html'; // Redirect to the game screen
             } catch (error) {
                 console.error('Burn failed', error);
                 alert('Burn failed. Please try again.');
